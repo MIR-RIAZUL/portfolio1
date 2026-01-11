@@ -1,0 +1,189 @@
+:root {
+  --bg: #d1d5db;          /* mature gray background */
+  --text: #111827;         /* dark text */
+  --primary: #1f2937;      /* deep gray/charcoal */
+  --secondary: #b45309;    /* muted amber */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 10%;
+  background: #f3f4f6;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: var(--text);
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10%;
+}
+
+.hero-image img {
+  width: 300px;
+  border-radius: 20px;
+}
+
+.typing {
+  color: var(--secondary);
+  margin: 10px 0;
+}
+
+/* SECTIONS */
+.section {
+  padding: 100px 10%;
+  background: #e5e7eb;
+  text-align: center;
+}
+
+.dark-bg {
+  background: #cbd5e1;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  color: var(--primary);
+  margin-bottom: 25px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  padding: 25px;
+  background: #f3f4f6;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+.contact-card {
+  background: #f9fafb;
+  padding: 30px;
+  max-width: 500px;
+  margin: 0 auto 30px;
+  border-radius: 20px;
+}
+
+.social-icons a {
+  font-size: 28px;
+  margin: 0 10px;
+  color: var(--primary);
+}
+.social-icons a:hover {
+  color: var(--secondary);
+}
+
+/* COMMENT FORM */
+.comment-form {
+  max-width: 600px;
+  margin: auto;
+  padding: 30px;
+  background: #f9fafb;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.comment-form input,
+.comment-form textarea {
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #9ca3af;
+}
+
+.comment-form button {
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.comment-form button:hover {
+  background: var(--secondary);
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #25D366;
+  color: white;
+  padding: 16px;
+  border-radius: 50%;
+}
+
+/* Logo drop-down animation */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary);
+
+  /* Animation */
+  animation: dropDown 1s ease forwards;
+}
+
+/* Keyframes for drop-down */
+@keyframes dropDown {
+  0% {
+    transform: translateY(-50px); /* start above */
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);     /* final position */
+    opacity: 1;
+  }
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary);
+
+  animation: dropBounce 2s ease-in-out infinite;
+}
+
+@keyframes dropBounce {
+  0%   { transform: translateY(-50px); opacity: 0; }
+  50%  { transform: translateY(5px); opacity: 1; }
+  70%  { transform: translateY(-2px); }
+  100% { transform: translateY(0); }
+}
